@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Test;
 
@@ -16,7 +16,7 @@ class MathTest extends TestCase
 
     public function testSub()
     {
-        $this->assertEquals(-2, Math::add(2, 4));
+        $this->assertEquals(-2, Math::sub(2, 4));
     }
 
     public function testIsOdd()

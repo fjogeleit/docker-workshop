@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  npm_install:
+      image: bitnami/node
+      entrypoint: npm
+      command: install
+      volumes:
+          - ./fastify-example:/app
+
+  server:
+      build:
+        context: '.'
+      depends_on: ['postgres']
+      ports:
+        - '3000:3000'
+      networks:
+        - server
+      env_file:
+        - '.env'
+
+  postgres:
+      image: 'postgres:13-alpine'
+      ports:
+        - '5432:5432'
+      networks:
+        - server
+      env_file:
+        - '.env'
+
+networks:
+  server:

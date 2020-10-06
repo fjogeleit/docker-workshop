@@ -26,7 +26,7 @@ Run PHPUnit Tests using the official PHPUnit Docker Image
 Run PHPCodeSniffer using the cytopia/phpcs Docker Image
 
 * use `cytopia/phpcs` image
-* mount the local app directory to /app inside of the phpunit container
+* mount the local `app` directory to `/data` inside of the phpunit container
     * mount rule `$(pwd)/app:/data`
 * autoremove the container after exit
 * execute PHPCS on the `src` folder with the progress `-p` option
@@ -36,7 +36,7 @@ Run PHPCodeSniffer using the cytopia/phpcs Docker Image
 Install JavaScript dependencies using the bitname/node docker image
 
 * use `bitnami/node` image
-* mount the local server directory to /app inside of the node container
+* mount the local `server` directory to `/app` inside of the node container
     * mount rule `$(pwd)/server:/app`
 * autoremove the container after exit
 * execute `npm install` to install all required dependencies
@@ -46,7 +46,7 @@ Install JavaScript dependencies using the bitname/node docker image
 Run the example server in docker and bind it on localhost
 
 * use `bitnami/node` image
-* mount the local server directory to /app inside of the node container
+* mount the local `server` directory to `/app` inside of the node container
     * mount rule `$(pwd)/server:/app`
 * autoremove the container after exit
 * (otional) define the server port using the PORT ENV variable - default is 3000
@@ -54,3 +54,4 @@ Run the example server in docker and bind it on localhost
     * port schema `<local-port>:<container-port>`
 * execute `npm start` to start the server
 * surfe `http://localhost:<local-port>/is-odd/5`
+* Documentation on [DockerHub](https://hub.docker.com/r/bitnami/node/)

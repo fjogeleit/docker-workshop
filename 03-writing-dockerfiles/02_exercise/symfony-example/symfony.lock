@@ -1,4 +1,10 @@
 {
+    "beberlei/assert": {
+        "version": "v3.2.7"
+    },
+    "k911/swoole-bundle": {
+        "version": "v0.8.2"
+    },
     "php": {
         "version": "7.4"
     },
@@ -114,6 +120,9 @@
     },
     "symfony/polyfill-php80": {
         "version": "v1.18.1"
+    },
+    "symfony/process": {
+        "version": "v5.1.7"
     },
     "symfony/routing": {
         "version": "5.1",
